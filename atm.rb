@@ -13,4 +13,15 @@ class ATM
   def balance
     @amount
   end
+
+  def withdraw(n)
+    if  n <= @amount && n > 0
+      @amount -= n
+    else
+      @amount
+    end
+
+    return @amount
+  end
+
 end
