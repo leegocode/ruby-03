@@ -1,8 +1,9 @@
 class ATM
+  attr_reader :balance
+
   def initialize(amount)
     @amount = amount
-
-  end
+   end
 
   def deposit(n)
     if n > 0
@@ -15,7 +16,7 @@ class ATM
   end
 
   def withdraw(n)
-    if  n <= @amount && n > 0
+    if  n <= @amount && is_enough?(n)
       @amount -= n
     else
       @amount
@@ -24,4 +25,8 @@ class ATM
     return @amount
   end
 
+    private
+    def is_enough? (n)
+      0 < n
+    end
 end

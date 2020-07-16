@@ -1,5 +1,4 @@
 class Nono
-  # alias :dog  :cat
   def cat
     puts "meow"
   end
